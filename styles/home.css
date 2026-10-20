@@ -81,7 +81,7 @@
 .sp-card:hover .sp-portrait img{ transform:scale(1.05); }
 .sp-card h4{ margin:16px 0 0; font-family:'DM Sans', var(--body); font-weight:700; font-size:21px; line-height:1.2; color:var(--ink); }
 .sp-card p{ margin:6px 0 0; font-family:'DM Sans', var(--body); font-size:15px; line-height:1.4; color:rgba(100,29,119,.85); }
-@media (max-width:1100px){ .sp-row{ grid-template-columns:repeat(4, 200px); gap:20px 32px; } }
+@media (max-width:1100px){ .sp-row{ grid-template-columns:repeat(4, 200px); gap:20px 32px; } .hero-art{ margin-top:-11vw; } }
 @media (max-width:940px){ .sp-row{ grid-template-columns:repeat(2, 200px); gap:36px 32px; } .sp-row > *{ margin-top:0 !important; } }
 @media (max-width:480px){
   .sp-row{ grid-template-columns:repeat(2, minmax(0,1fr)); gap:28px 16px; }
@@ -120,7 +120,7 @@
 .notify-msg.show{ opacity:1; }
 .notify .leaf{ z-index:1; }
 
-@media (max-width:860px){ .info-grid{ grid-template-columns:1fr; gap:20px; } .info-card{ padding:28px 24px 30px; } }
+@media (max-width:860px){ .info-grid{ grid-template-columns:1fr; gap:20px; } .info-card{ padding:28px 24px 30px; } .notify::before{ inset:0 -24px; } }
 @media (max-width:640px){
   .hero-copy{ padding-top:116px; }
   .hero-bfly{ width:72px; height:72px; }
@@ -135,7 +135,15 @@
   .register-head{ padding:0; }
   .register-card{ padding:22px 20px 24px 14px; grid-template-columns:44px 1fr; }
   .reg-icon{ width:44px; height:44px; }
-  .notify-form{ flex-direction:column; }
-  .notify-form button{ width:100%; }
+  /* Get notified: a contained card on phones instead of the edge-to-edge desktop band */
+  .notify{ margin:72px 16px 0; padding:36px 20px 26px; }
+  .notify::before{ inset:0; border-radius:28px 4px 28px 4px; }
+  .notify .home-title{ font-size:30px; }
+  .notify p{ max-width:30ch; font-size:15px; }
+  .notify-form{ flex-direction:column; gap:10px; margin-top:20px; }
+  .notify-form input, .notify-form button{ flex:none; height:52px; font-size:16px; }
+  .notify-msg{ margin-top:8px; min-height:0; }
+  .notify-msg:empty{ display:none; }
+  .notify-form button{ width:100%; background:var(--grad); border:0; color:#fff; font-weight:600; box-shadow:0 10px 16px -6px rgba(219,35,117,.4); }
   .leaf{ display:none; }
 }
