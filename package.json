@@ -1,0 +1,16 @@
+{
+  "name": "foi-delhi-website",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "check:indexing": "node scripts/check-indexing.mjs",
+    "check:attendees": "node scripts/check-attendees.mjs"
+  },
+  "dependencies": {
+    "next": "^16.3.8",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  }
+}

@@ -1,0 +1,67 @@
+/* ---- Volunteers ---- */
+.vol-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
+@media (max-width:900px){ .vol-grid{ grid-template-columns:1fr; } }
+.vol-list{ list-style:none; padding:0; margin:26px 0 0; display:grid; gap:15px; }
+.vol-list li{ display:flex; gap:12px; align-items:flex-start; font-size:14.5px; opacity:.88; }
+.vol-list svg{ width:18px; height:18px; color:var(--maroon); flex-shrink:0; margin-top:2px; }
+.vol-form{ padding:32px; }
+.volunteer-closed{ align-self:start; }
+.volunteer-closed-label{ display:inline-block; margin-bottom:14px; padding:6px 10px; border-radius:999px; background:rgba(122,79,160,.1); color:var(--maroon); font-size:10px; font-weight:700; letter-spacing:1.4px; }
+.volunteer-closed h3{ margin:0 0 10px; color:var(--plum); font-size:22px; }
+.volunteer-closed p{ margin:0; font-size:14px; line-height:1.7; opacity:.76; }
+
+.success-box{ display:none; text-align:center; padding:16px 6px; }
+.success-box.show{ display:block; }
+.success-box svg{ width:40px; height:40px; color:var(--maroon); margin-bottom:12px; }
+
+
+/* ================= VOLUNTEER REGISTRATION FORM ================= */
+.volunteer-form-shell{display:flex;flex-direction:column;gap:16px;}
+.volunteer-guidance{background:linear-gradient(135deg,rgba(194,55,100,.055),rgba(112,44,78,.045));border:1px solid var(--line);border-radius:16px;padding:16px 17px;}
+.volunteer-guidance h4{margin:0 0 8px;color:var(--plum);font-size:14px;}
+.volunteer-guidance p{margin:0 0 10px;font-size:12px;line-height:1.65;opacity:.78;}
+.volunteer-guidance-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;margin-top:10px;}
+.volunteer-guidance-item{font-size:11.5px;line-height:1.55;color:var(--ink);}
+.volunteer-guidance-item strong{color:var(--maroon);}
+.volunteer-scroll-box{max-height:520px;overflow-y:auto;overscroll-behavior:contain;padding:17px;background:var(--cream);border:1px solid var(--line);border-radius:16px;box-shadow:inset 0 1px 0 rgba(255,255,255,.6);}
+.volunteer-scroll-box::-webkit-scrollbar{width:7px;}
+.volunteer-scroll-box::-webkit-scrollbar-track{background:transparent;}
+.volunteer-scroll-box::-webkit-scrollbar-thumb{background:rgba(112,44,78,.22);border-radius:99px;}
+.volunteer-section-label{margin:2px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--line);color:var(--plum);font-size:12px;letter-spacing:1.2px;text-transform:uppercase;font-weight:700;}
+.volunteer-field{margin-bottom:13px;}
+.volunteer-field label{display:block;font-size:11.5px;line-height:1.5;color:var(--maroon);font-weight:600;margin-bottom:6px;}
+.volunteer-field input,.volunteer-field select,.volunteer-field textarea{width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:11px;padding:11px 12px;background:var(--paper);font:inherit;font-size:13px;color:var(--ink);outline:none;transition:border-color .2s,box-shadow .2s;}
+.volunteer-field textarea{min-height:88px;resize:vertical;line-height:1.55;}
+.volunteer-field input:focus,.volunteer-field select:focus,.volunteer-field textarea:focus{border-color:var(--magenta);box-shadow:0 0 0 3px rgba(194,55,100,.08);}
+.volunteer-field.error input,.volunteer-field.error select,.volunteer-field.error textarea{border-color:#C23B3B;}
+.volunteer-error{display:none;font-size:10.5px;color:#C23B3B;margin-top:4px;}
+.volunteer-field.error .volunteer-error{display:block;}
+.volunteer-submit{width:100%;margin-top:3px;padding:13px 16px;border:0;border-radius:12px;color:#fff;font-weight:600;font-size:13.5px;background:linear-gradient(120deg,var(--maroon),var(--magenta) 55%,var(--coral));cursor:pointer;}
+.volunteer-submit:hover{filter:brightness(1.03);}
+.volunteer-note{font-size:10.5px;line-height:1.5;opacity:.62;margin:9px 0 0;}
+@media (max-width:700px){.volunteer-guidance-grid{grid-template-columns:1fr;}.volunteer-scroll-box{max-height:500px;padding:14px;}.vol-form{padding:20px;}}
+
+.registration-detail-form{display:flex;flex-direction:column;}
+.detail-field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;font-size:12px;color:var(--plum);font-weight:600;}
+.detail-field input{width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:10px;padding:11px 12px;background:var(--paper);font:inherit;font-weight:400;color:var(--ink);outline:none;}
+.detail-field input:focus{border-color:var(--magenta);box-shadow:0 0 0 3px rgba(194,55,100,.08);}
+.detail-submit{align-self:flex-start;margin-top:2px;}
+.detail-success{margin-top:16px;}
+
+@media (max-width:760px){.registration-detail-form{padding-top:24px;}}
+
+/* ---- Attendee form ---- */
+.att-form h3, .att-done h3{ margin:0 0 4px; font-size:clamp(28px,2.6vw,36px); color:var(--ink); }
+.att-sub{ margin:0 0 22px; font-size:14px; color:var(--purple); opacity:.8; }
+.att-form .detail-field{ font-size:13px; font-weight:500; }
+.att-form .detail-field input{ height:52px; border-radius:15px; border:1px solid var(--rose); background:rgba(249,150,191,.12); font-size:16px; transition:box-shadow .25s ease, background .25s ease; }
+.att-form .detail-field input:focus{ background:rgba(255,255,255,.8); border-color:var(--pink); box-shadow:0 0 0 4px rgba(249,150,191,.25); }
+.att-error{ margin:0 0 14px; padding:12px 14px; border-radius:12px; background:rgba(219,35,117,.08); color:var(--pink); font-size:14px; animation: heroIn .4s var(--ease); }
+.att-submit{ align-self:flex-start; margin-top:6px; }
+.att-submit:disabled{ opacity:.65; cursor:progress; transform:none; }
+.att-done{ text-align:center; animation: heroIn .6s var(--ease); }
+.att-done img{ width:72px; margin:0 auto 12px; animation: bflyBob 4s ease-in-out infinite; }
+.att-done p{ margin:0; color:var(--purple); line-height:1.6; }
+.att-art{ width:min(360px,80%); height:auto; margin-top:34px; animation: leafFloat 7s ease-in-out infinite; }
+.att-form{ display:flex; flex-direction:column; }
+.hp{ position:absolute; left:-9999px; width:1px; height:1px; opacity:0; }

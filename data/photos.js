@@ -1,0 +1,42 @@
+// Memories (local, used by the home mosaic and the gallery) + older gallery shots.
+// width/height are the real pixel sizes so the gallery reserves space before load.
+export const memories = [
+  { src: '/assets/memories/t01.webp', alt: 'Audience in a packed auditorium during a keynote', width: 1400, height: 1050 },
+  { src: '/assets/memories/t02.webp', alt: 'Festival guest speaking on stage', width: 1050, height: 1400 },
+  { src: '/assets/memories/t03.webp', alt: 'Students gathered at a festival stall', width: 1280, height: 853 },
+  { src: '/assets/memories/t04.webp', alt: 'Speaker in conversation', width: 1400, height: 933 },
+  { src: '/assets/memories/t05.webp', alt: 'Guest at the festival', width: 683, height: 1024 },
+  { src: '/assets/memories/t06.webp', alt: 'Festival installation', width: 768, height: 1152 },
+  { src: '/assets/memories/t07.webp', alt: 'Speaker addressing students', width: 751, height: 1000 },
+  { src: '/assets/memories/t08.webp', alt: 'Speaker on stage with microphone', width: 960, height: 1280 },
+  { src: '/assets/memories/t09.webp', alt: 'Attendees writing notes', width: 1400, height: 933 },
+  { src: '/assets/memories/t10.webp', alt: 'Banquet hall during a festival dinner', width: 1400, height: 1050 },
+  { src: '/assets/memories/t11.webp', alt: 'Panel discussion in the main auditorium', width: 1400, height: 929 },
+  { src: '/assets/memories/t12.webp', alt: 'Speaker at the festival', width: 751, height: 1000 },
+  { src: '/assets/memories/t13.webp', alt: 'Panel on the illustrated festival stage', width: 1400, height: 648 },
+  { src: '/assets/memories/t14.webp', alt: 'Guest speaker portrait', width: 1400, height: 1400 },
+  { src: '/assets/memories/t15.webp', alt: 'Speaker holding a microphone', width: 786, height: 1400 },
+  { src: '/assets/memories/t16.webp', alt: 'Keynote at the Festival of Ideas podium', width: 933, height: 1400 },
+  { src: '/assets/memories/t17.webp', alt: 'Dr. S. Jaishankar in conversation', width: 1125, height: 1400 },
+  { src: '/assets/memories/t18.webp', alt: 'Colourful bunting over the festival grounds', width: 646, height: 1400 },
+  { src: '/assets/memories/t19.webp', alt: 'Guests walking through the audience', width: 1400, height: 933 },
+  { src: '/assets/memories/t20.webp', alt: 'Panel conversation on stage', width: 960, height: 1280 },
+  { src: '/assets/memories/t21.webp', alt: 'Speaker in conversation', width: 719, height: 1280 },
+  { src: '/assets/memories/t22.webp', alt: 'Festival moment', width: 1400, height: 933 },
+];
+
+export const pastEditions = [
+  { src: '/img/gallery/past-01.webp', alt: 'Scene from a past edition (1)', width: 1280, height: 853 },
+  { src: '/img/gallery/past-02.webp', alt: 'Scene from a past edition (2)', width: 1280, height: 853 },
+  { src: '/img/gallery/past-03.webp', alt: 'Scene from a past edition (3)', width: 1280, height: 853 },
+  { src: '/img/gallery/past-04.webp', alt: 'Scene from a past edition (4)', width: 1280, height: 853 },
+  { src: '/img/gallery/past-05.webp', alt: 'Scene from a past edition (6)', width: 1280, height: 853 },
+  { src: '/img/gallery/past-06.webp', alt: 'Scene from a past edition (10)', width: 1280, height: 853 },
+  { src: '/img/gallery/past-07.webp', alt: 'Scene from a past edition (11)', width: 1280, height: 853 },
+  { src: '/img/gallery/past-08.webp', alt: 'Scene from a past edition (12)', width: 751, height: 1000 },
+  { src: '/img/gallery/past-09.webp', alt: 'Scene from a past edition (13)', width: 853, height: 1280 },
+  { src: '/img/gallery/past-10.webp', alt: 'Scene from a past edition (14)', width: 1280, height: 853 },
+  { src: '/img/gallery/past-11.webp', alt: 'Scene from a past edition (15)', width: 1280, height: 720 },
+  { src: '/img/gallery/past-12.webp', alt: 'Scene from a past edition (16)', width: 1280, height: 853 },
+  { src: '/img/gallery/past-13.webp', alt: 'Scene from a past edition (17)', width: 1280, height: 853 },
+];
