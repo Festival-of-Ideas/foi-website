@@ -29,7 +29,7 @@ export default async function SpeakerDetail({ params }) {
         <div className="detail-grid">
           <Portrait sp={sp} tint={sp.id.startsWith('p') ? 'past' : 'upcoming'} eager />
           <div>
-            <h2 className="detail-name">{sp.name}</h2>
+            <h1 className="detail-name">{sp.name}</h1>
             <div className="detail-role">{sp.role}</div>
             <p className="detail-bio">{sp.bio}</p>
           </div>

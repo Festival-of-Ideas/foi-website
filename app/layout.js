@@ -20,7 +20,6 @@ export const metadata = {
     google: process.env.GOOGLE_SITE_VERIFICATION || undefined,
     other: process.env.BING_SITE_VERIFICATION ? { 'msvalidate.01': process.env.BING_SITE_VERIFICATION } : undefined,
   },
-  icons: { icon: '/assets/logo-butterfly.png' },
 };
 
 const bfly = <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 11c-1.5-4-6-7-9-6-1 3 1 7 5 8-3 1-5 4-4 7 3 1 7-1 8-4 1 3 5 5 8 4 1-3-1-6-4-7 4-1 6-5 5-8-3-1-7.5 2-9 6Z" opacity=".9" /></svg>;

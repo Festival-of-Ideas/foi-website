@@ -12,9 +12,15 @@ export function Portrait({ sp, tint = 'past', eager }) {
   );
 }
 
-export default function SpeakerCard({ sp, tint, i = 0 }) {
+// `dup` marks the marquee's repeated copy: hidden from assistive tech and the tab order.
+export default function SpeakerCard({ sp, tint, i = 0, dup }) {
   return (
-    <FlyLink href={`/speakers/${sp.id}`} className="sp-card reveal" style={{ '--i': i }}>
+    <FlyLink
+      href={`/speakers/${sp.id}`}
+      className={`sp-card reveal${dup ? ' sp-dup' : ''}`}
+      style={{ '--i': i }}
+      {...(dup && { 'aria-hidden': true, tabIndex: -1 })}
+    >
       <Portrait sp={sp} tint={tint} />
       <h4>{sp.name}</h4>
       <p>{sp.role}</p>

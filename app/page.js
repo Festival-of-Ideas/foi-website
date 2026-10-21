@@ -29,6 +29,38 @@ const siteIdentity = {
       description: 'A joint initiative by Shri Ram College of Commerce and Festival of Ideas Foundation celebrating ideas across the life, culture and economy of the Indian people.',
       sameAs: Object.values(SOCIAL_LINKS),
     },
+    {
+      '@type': 'Event',
+      '@id': absoluteUrl('/#event'),
+      name: 'Festival of Ideas Delhi 2026',
+      description: 'The fourth edition of the Festival of Ideas Delhi: talks, competitions, books and performances on the life, culture and economy of the Indian people.',
+      startDate: '2026-10-29T09:30:00+05:30',
+      endDate: '2026-11-01',
+      eventStatus: 'https://schema.org/EventScheduled',
+      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+      url: absoluteUrl('/'),
+      image: absoluteUrl('/img/hero.webp'),
+      location: {
+        '@type': 'Place',
+        name: 'Shri Ram College of Commerce, University of Delhi',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Maurice Nagar',
+          addressLocality: 'Delhi',
+          postalCode: '110007',
+          addressCountry: 'IN',
+        },
+      },
+      organizer: { '@id': absoluteUrl('/#organization') },
+      // Entry is free with attendee registration (see the About FAQ)
+      offers: {
+        '@type': 'Offer',
+        price: 0,
+        priceCurrency: 'INR',
+        availability: 'https://schema.org/InStock',
+        url: absoluteUrl('/attendees'),
+      },
+    },
   ],
 };
 
@@ -115,11 +147,12 @@ export default function Home() {
         <img className="leaf" src="/img/leaf-almond-a.svg" alt="" style={{ right: '4.4%', top: 133, transform: 'rotate(62.45deg) scaleX(-1)' }} />
         <img className="leaf" src="/img/leaf-willow-b.svg" alt="" style={{ right: '4.3%', top: 235, transform: 'rotate(-66.3deg) scaleX(-1)' }} />
         <h2 className="home-title reveal">Past Speakers</h2>
-        <div className="sp-row">
-          {pastPicks.slice(0, 4).map((sp, i) => <SpeakerCard key={sp.id} sp={sp} tint="past" i={i} />)}
-        </div>
-        <div className="sp-row">
-          {pastPicks.slice(4).map((sp, i) => <SpeakerCard key={sp.id} sp={sp} tint="past" i={i} />)}
+        {/* 4×2 grid on desktop; on phones the track scrolls as a looping marquee (second copy fills the loop) */}
+        <div className="sp-marquee">
+          <div className="sp-track">
+            {pastPicks.map((sp, i) => <SpeakerCard key={sp.id} sp={sp} tint="past" i={i % 4} />)}
+            {pastPicks.map((sp) => <SpeakerCard key={`${sp.id}-dup`} sp={sp} tint="past" dup />)}
+          </div>
         </div>
         <FlyLink href="/speakers" className="text-link">View all speakers <Arrow /></FlyLink>
       </div>

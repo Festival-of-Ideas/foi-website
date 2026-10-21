@@ -1,6 +1,6 @@
 /* ===== NAV (Figma: floating glass pill) ===== */
 header.nav{
-  position:fixed; top:39px; left:50%; translate:-50% 0; z-index:1000;
+  position:fixed; top:20px; left:50%; translate:-50% 0; z-index:1000;
   width:min(1297px, calc(100% - 32px)); height:84px; padding:0 22px;
   display:flex; align-items:center; justify-content:space-between; gap:20px;
   background:rgba(255,255,255,.72); -webkit-backdrop-filter:blur(16px) saturate(1.2); backdrop-filter:blur(16px) saturate(1.2);
@@ -11,7 +11,7 @@ header.nav{
 }
 @keyframes navIn{ from{ opacity:0; translate:-50% -30px; } to{ opacity:1; translate:-50% 0; } }
 header.nav.scrolled{ top:14px; height:72px; box-shadow:0 18px 44px -12px rgba(58,17,83,.18); }
-.brand{ display:flex; align-items:center; flex-shrink:0; }
+.brand{ display:flex; align-items:center; flex-shrink:0; margin-left:14px; }
 .brand img{ width:141px; height:58px; object-fit:contain; transition: transform .4s var(--ease); }
 .brand:hover img{ transform:scale(1.04) rotate(-1deg); }
 
@@ -21,11 +21,21 @@ nav.links{ display:flex; align-items:center; gap:30px; }
 .nav-link.active{ color:var(--pink); }
 /* Figma "Nav active dot": a pink petal under the current link */
 .nav-link::after{
-  content:''; position:absolute; left:50%; top:calc(100% + 8px); width:6px; height:10px;
+  content:''; position:absolute; left:50%; top:calc(100% + 2px); width:6px; height:10px;
   background:url('/img/nav-dot.svg') center/contain no-repeat;
   transform:translateX(-50%) rotate(-90deg) scale(0); transition: transform .35s var(--ease);
 }
 .nav-link.active::after{ transform:translateX(-50%) rotate(-90deg) scale(1); }
+/* Dropdowns: open on hover or keyboard focus. The panel's wrapper starts at the link and pads down,
+   so the pointer can travel from link to panel without the menu closing. */
+.nav-item{ position:relative; display:flex; align-items:center; }
+.nav-caret{ width:10px; height:10px; margin-left:4px; vertical-align:-1px; transition:transform .3s var(--ease); }
+.nav-item:hover .nav-caret, .nav-item:focus-within .nav-caret{ transform:rotate(180deg); }
+.nav-drop{ position:absolute; top:100%; left:50%; width:max-content; padding-top:36px; opacity:0; visibility:hidden; transform:translate(-50%, 6px); transition: opacity .25s ease, transform .3s var(--ease), visibility .25s; }
+.nav-item:hover .nav-drop, .nav-item:focus-within .nav-drop{ opacity:1; visibility:visible; transform:translate(-50%, 0); }
+.nav-drop-panel{ display:flex; flex-direction:column; min-width:210px; padding:8px; background:#FFFBF8; border:1.5px solid rgba(255,255,255,.95); border-radius:20px; box-shadow:0 18px 44px -12px rgba(58,17,83,.2); }
+.drop-link{ padding:10px 14px; border-radius:12px; font-size:14px; line-height:1.45; color:var(--ink); white-space:nowrap; transition: background .2s ease, color .2s ease; }
+.drop-link:hover, .drop-link:focus-visible, .drop-link.active{ background:rgba(249,150,191,.18); color:var(--pink); }
 .nav-cta{ padding:10px 20px; border-radius:999px; background:var(--ink); color:#fff; font-size:14px; line-height:1.45; white-space:nowrap; box-shadow:0 8px 20px -4px rgba(100,29,119,.25); transition: transform .3s var(--ease), background .3s ease; }
 .nav-cta:hover{ transform:translateY(-2px); background:var(--purple); }
 
@@ -44,7 +54,18 @@ nav.links{ display:flex; align-items:center; gap:30px; }
 }
 .mobile-panel.open{ transform:translateX(0); }
 .mobile-panel .close-row{ display:flex; justify-content:flex-end; margin-bottom:18px; }
-.mobile-panel .m-link{ display:block; padding:14px 4px; font-size:17px; color:var(--ink); border-bottom:1px solid var(--line); }
+.mobile-panel .m-row{ display:flex; align-items:center; border-bottom:1px solid var(--line); }
+.mobile-panel .m-link{ flex:1; display:block; padding:14px 4px; font-size:17px; color:var(--ink); }
+.m-toggle{ display:grid; place-items:center; width:40px; height:40px; border:0; background:none; color:var(--ink); }
+.m-toggle svg{ width:14px; height:14px; transition:transform .3s var(--ease); }
+.m-toggle[aria-expanded="true"] svg{ transform:rotate(180deg); }
+/* 0fr → 1fr grid rows animate the group open without measuring its height */
+.m-sub{ display:grid; grid-template-rows:0fr; transition:grid-template-rows .35s var(--ease); }
+.m-sub.open{ grid-template-rows:1fr; }
+.m-sub > div{ overflow:hidden; }
+.m-sublink{ display:block; padding:10px 4px 10px 16px; font-size:15px; color:var(--purple); }
+.m-sub > div > :first-child{ margin-top:6px; } .m-sub > div > :last-child{ margin-bottom:8px; }
+.m-sublink.active{ color:var(--pink); }
 .mobile-panel .m-link.active{ color:var(--pink); }
 .mobile-panel .nav-cta{ display:block; text-align:center; margin-top:22px; }
 .scrim{ position:fixed; inset:0; background:rgba(58,17,83,.35); z-index:1050; opacity:0; visibility:hidden; transition:opacity .35s ease, visibility .35s; }
@@ -53,5 +74,6 @@ nav.links{ display:flex; align-items:center; gap:30px; }
 @media (max-width:640px){
   header.nav{ top:16px; height:68px; padding:0 14px; }
   header.nav.scrolled{ top:10px; height:62px; }
+  .brand{ margin-left:8px; }
   .brand img{ width:112px; height:46px; }
 }
