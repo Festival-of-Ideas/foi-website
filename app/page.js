@@ -66,8 +66,8 @@ export default function Home() {
           <h1>Festival of Ideas</h1>
           <p className="hero-tagline">Ideas from the Life, Culture &amp; Economy of the Indian People</p>
           <div className="hero-ctas">
-            <FlyLink className="btn-primary" href="/attendees">Register interest</FlyLink>
-            <FlyLink className="btn-ghost" href="/programmes">Explore programmes</FlyLink>
+            <FlyLink className="btn-primary" href="/attendees">Register now</FlyLink>
+            <FlyLink className="btn-ghost" href="/programmes">Explore the festival</FlyLink>
           </div>
         </div>
         <div className="hero-art" aria-hidden="true">
