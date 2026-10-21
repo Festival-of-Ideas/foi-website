@@ -12,19 +12,11 @@
 @keyframes wingBeat{ 0%,80%,100%{ transform:scaleX(1); } 88%{ transform:scaleX(.82); } 94%{ transform:scaleX(1); } }
 .hero h1{ margin:2px 0 0; font-size:clamp(46px,5.5vw,83px); line-height:1.05; color:var(--title); animation: heroIn 1s var(--ease) .2s both; }
 .hero-tagline{ margin:10px 0 0; font-family:var(--serif); font-style:italic; font-weight:500; font-size:clamp(15px,1.35vw,20px); line-height:1.4; letter-spacing:.01em; color:var(--tagline); animation: heroIn 1s var(--ease) .32s both; }
-.countdown-row{ display:flex; align-items:center; gap:12px; margin-top:33px; animation: heroIn 1s var(--ease) .44s both; }
-.cd-box{ display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1px; width:92px; height:95px; border-radius:26px; background:var(--glass); -webkit-backdrop-filter:blur(7px); backdrop-filter:blur(7px); border:1px solid var(--glass-edge); box-shadow:0 11px 17px rgba(58,17,83,.07); }
-.cd-box .num{ font-family:var(--serif); font-weight:600; font-size:39px; line-height:1.2; color:var(--ink); }
-.cd-box .num span{ display:inline-block; animation: tick .5s var(--ease); }
-@keyframes tick{ from{ opacity:0; transform:translateY(-40%); } to{ opacity:1; transform:none; } }
-.cd-box .lbl{ font-family:var(--ui); font-weight:600; font-size:8.6px; letter-spacing:.16em; color:var(--violet); }
-.cd-sep{ font-family:var(--serif); font-weight:600; font-size:30px; color:var(--pink); opacity:.6; animation: blink 2s ease-in-out infinite; }
-@keyframes blink{ 50%{ opacity:.2; } }
-.hero-ctas{ display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-top:34px; animation: heroIn 1s var(--ease) .56s both; }
+.hero-ctas{ display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-top:40px; animation: heroIn 1s var(--ease) .56s both; }
 @keyframes heroIn{ from{ opacity:0; transform:translateY(24px); } to{ opacity:1; transform:none; } }
 
-/* Illustration: starts 300px (≈40% of its height) above the end of the copy so the faded top sits behind it */
-.hero-art{ position:relative; z-index:1; width:100%; aspect-ratio:1509/745; margin-top:max(-298px, -19.7vw); }
+/* Illustration: starts ~170px above the end of the copy so its faded top sits behind the buttons */
+.hero-art{ position:relative; z-index:1; width:100%; aspect-ratio:1509/745; margin-top:max(-170px, -11.25vw); }
 /* clip so the load-in zoom can't push the image's top edge out above the fade */
 .hero-art .art-clip{ position:absolute; inset:0; overflow:hidden; }
 /* blend the illustration's bottom into the hills band instead of a hard cut */
@@ -81,7 +73,7 @@
 .sp-card:hover .sp-portrait img{ transform:scale(1.05); }
 .sp-card h4{ margin:16px 0 0; font-family:'DM Sans', var(--body); font-weight:700; font-size:21px; line-height:1.2; color:var(--ink); }
 .sp-card p{ margin:6px 0 0; font-family:'DM Sans', var(--body); font-size:15px; line-height:1.4; color:rgba(100,29,119,.85); }
-@media (max-width:1100px){ .sp-row{ grid-template-columns:repeat(4, 200px); gap:20px 32px; } .hero-art{ margin-top:-11vw; } }
+@media (max-width:1100px){ .sp-row{ grid-template-columns:repeat(4, 200px); gap:20px 32px; } }
 @media (max-width:940px){ .sp-row{ grid-template-columns:repeat(2, 200px); gap:36px 32px; } .sp-row > *{ margin-top:0 !important; } }
 @media (max-width:480px){
   .sp-row{ grid-template-columns:repeat(2, minmax(0,1fr)); gap:28px 16px; }
@@ -124,12 +116,8 @@
 @media (max-width:640px){
   .hero-copy{ padding-top:116px; }
   .hero-bfly{ width:72px; height:72px; }
-  .countdown-row{ gap:6px; margin-top:24px; }
-  .cd-box{ width:66px; height:72px; border-radius:20px; }
-  .cd-box .num{ font-size:28px; }
-  .cd-sep{ font-size:22px; }
   .hero-ctas .btn-primary, .hero-ctas .btn-ghost{ padding:14px 22px; font-size:15px; }
-  .hero-art{ margin-top:-12vw; aspect-ratio:1/0.75; }
+  .hero-art{ margin-top:-8vw; aspect-ratio:1/0.75; }
   .moments, .speakers-sec{ margin-top:72px; }
   .register{ margin-top:90px; }
   .register-head{ padding:0; }

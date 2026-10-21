@@ -1,5 +1,4 @@
 import FlyLink from '../components/FlyLink';
-import Countdown from '../components/Countdown';
 import NotifyForm from '../components/NotifyForm';
 import SpeakerCard from '../components/SpeakerCard';
 import MemoriesMosaic from '../components/MemoriesMosaic';
@@ -66,7 +65,6 @@ export default function Home() {
           <div className="hero-bfly"><img src="/img/butterfly.webp" alt="" width="100" height="100" /></div>
           <h1>Festival of Ideas</h1>
           <p className="hero-tagline">Ideas from the Life, Culture &amp; Economy of the Indian People</p>
-          <Countdown />
           <div className="hero-ctas">
             <FlyLink className="btn-primary" href="/attendees">Register interest</FlyLink>
             <FlyLink className="btn-ghost" href="/programmes">Explore programmes</FlyLink>
