@@ -82,7 +82,7 @@ export default function Home() {
       <div className="home-sec about">
         <div className="eyebrow reveal"><span>ABOUT THE FESTIVAL</span></div>
         <h2 className="home-title reveal">Let noble thoughts come to us from all directions</h2>
-        <p className="lede reveal">The Festival of Ideas Delhi 2026 (formerly the DU Litfest at SRCC) is a premier intellectual forum bringing together leading voices across the life, culture and economy of the Indian people. A joint initiative by the Festival of Ideas Foundation and Shri Ram College of Commerce, the platform aims at celebrating ideas that spark positive economic and social change in a rapidly evolving global order. Join us as we endeavour to create an accessible space that fosters curiosity, open debate, diverse perspectives, and a shared purpose among young inquisitive minds.</p>
+        <p className="lede reveal">The Festival of Ideas Delhi 2026 is a premier intellectual forum bringing together leading voices across the life, culture and economy of the Indian people. A joint initiative by the Festival of Ideas Foundation and Shri Ram College of Commerce, the platform aims at celebrating ideas that spark positive economic and social change in a rapidly evolving global order. Join us as we endeavour to create an accessible space that fosters curiosity, open debate, diverse perspectives, and a shared purpose among young inquisitive minds.</p>
         <div className="info-grid">
           <div className="info-card reveal">
             <div className="info-head"><span className="badge"><img src="/img/icon-calendar.svg" alt="" /></span><h3>Venue details</h3></div>
