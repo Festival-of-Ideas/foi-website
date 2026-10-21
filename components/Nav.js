@@ -53,7 +53,7 @@ export default function Nav() {
     <>
       <header className={`nav${scrolled ? ' scrolled' : ''}`} id="siteNav">
         <FlyLink href="/" className="brand" onClick={close} aria-label="Festival of Ideas Delhi — home">
-          <img src="/img/logo-nav.webp" alt="Festival of Ideas Delhi" width="141" height="58" />
+          <img src="/img/logo-nav.webp" alt="Festival of Ideas Delhi" width="124" height="51" />
         </FlyLink>
 
         <nav className="links" aria-label="Main">
