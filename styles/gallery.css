@@ -1,6 +1,6 @@
 /* ---- Gallery: uncropped justified rows; flex-basis and grow both scale with aspect ratio --r, so every photo in a row gets the same height ---- */
 .gallery-section + .gallery-section{ margin-top:56px; }
-.gallery-sub{ margin:0 0 20px; font-size:clamp(22px,2.6vw,28px); color:var(--plum); }
+.gallery-sub{ margin:0 0 20px; font-size:var(--fs-h3); line-height:var(--lh-heading); color:var(--plum); }
 .gallery-masonry{ display:flex; flex-wrap:wrap; align-items:flex-start; gap:18px; --row:260px; }
 .gallery-masonry::after{ content:''; flex-grow:1; } /* soaks up a little of the last row so a lone photo doesn't blow up */
 .g-item{ position:relative; display:block; flex:var(--r) 1 calc(var(--r) * var(--row)); margin:0; padding:0; border:0; border-radius:24px 4px 24px 4px; overflow:hidden; background:var(--cream-deep); cursor:zoom-in; box-shadow:0 10px 24px -14px rgba(46,27,61,.35); transition:transform .35s ease, box-shadow .35s ease; }

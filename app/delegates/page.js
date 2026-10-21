@@ -10,7 +10,7 @@ export default function DelegatesPage() {
     <section className="page" id="page-delegates">
       <div className="wrap">
         <div className="vol-grid">
-          <div>
+          <div className="att-intro">
             <PageHead eyebrow="JOIN THE DELEGATION" title="Register as a Delegate" desc="Take part as a delegate and engage more closely with the festival programme." descStyle={{ marginBottom: 0 }} />
             <CheckList items={['Participate in selected festival sessions', 'Connect with speakers, students and fellow delegates', 'Receive delegate-specific festival information']} />
             <img className="att-art" src="/img/register-art.webp" alt="" width="664" height="488" />

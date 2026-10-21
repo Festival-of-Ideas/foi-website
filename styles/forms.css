@@ -2,7 +2,7 @@
 .vol-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
 @media (max-width:900px){ .vol-grid{ grid-template-columns:1fr; } }
 .vol-list{ list-style:none; padding:0; margin:26px 0 0; display:grid; gap:15px; }
-.vol-list li{ display:flex; gap:12px; align-items:flex-start; font-size:14.5px; opacity:.88; }
+.vol-list li{ display:flex; gap:12px; align-items:flex-start; font-size:var(--fs-body); line-height:var(--lh-body); opacity:.88; }
 .vol-list svg{ width:18px; height:18px; color:var(--maroon); flex-shrink:0; margin-top:2px; }
 .vol-form{ padding:32px; }
 .volunteer-closed{ align-self:start; }
@@ -51,8 +51,8 @@
 @media (max-width:760px){.registration-detail-form{padding-top:24px;}}
 
 /* ---- Attendee form ---- */
-.att-form h3, .att-done h3{ margin:0 0 4px; font-size:clamp(28px,2.6vw,36px); color:var(--ink); }
-.att-sub{ margin:0 0 22px; font-size:14px; color:var(--purple); opacity:.8; }
+.att-form h3, .att-done h3{ margin:0 0 4px; font-size:var(--fs-h3); line-height:var(--lh-heading); color:var(--ink); }
+.att-sub{ margin:0 0 22px; font-size:var(--fs-body); line-height:var(--lh-body); color:var(--purple); opacity:.8; }
 .att-form .detail-field{ font-size:13px; font-weight:500; }
 .att-form .detail-field input{ height:52px; border-radius:15px; border:1px solid var(--rose); background:rgba(249,150,191,.12); font-size:16px; transition:box-shadow .25s ease, background .25s ease; }
 .att-form .detail-field input:focus{ background:rgba(255,255,255,.8); border-color:var(--pink); box-shadow:0 0 0 4px rgba(249,150,191,.25); }
@@ -61,7 +61,9 @@
 .att-submit:disabled{ opacity:.65; cursor:progress; transform:none; }
 .att-done{ text-align:center; animation: heroIn .6s var(--ease); }
 .att-done img{ width:72px; margin:0 auto 12px; animation: bflyBob 4s ease-in-out infinite; }
-.att-done p{ margin:0; color:var(--purple); line-height:1.6; }
-.att-art{ width:min(360px,80%); height:auto; margin-top:34px; animation: leafFloat 7s ease-in-out infinite; }
+.att-done p{ margin:0; font-size:var(--fs-body); color:var(--purple); line-height:var(--lh-body); }
+/* Registration desk art: sits at the foot of the intro column (level with the form's bottom), bobbing without rotating */
+.att-intro{ display:flex; flex-direction:column; align-self:stretch; }
+.att-art{ width:min(360px,80%); height:auto; margin-top:auto; padding-top:34px; animation: bflyBob 7s ease-in-out infinite; }
 .att-form{ display:flex; flex-direction:column; }
 .hp{ position:absolute; left:-9999px; width:1px; height:1px; opacity:0; }
