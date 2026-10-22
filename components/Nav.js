@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import FlyLink from './FlyLink';
 import { aboutSections } from '../data/about';
-import { programmes } from '../data/programmes';
 
 const links = [
   ['/', 'Home'],
@@ -12,7 +11,7 @@ const links = [
   ['/leadership', 'Leadership'],
   ['/speakers', 'Speakers'],
   ['/partners', 'Partners'],
-  ['/programmes', 'Programmes'],
+  // ['/programmes', 'Programmes'], // hidden from the navbar; route still live
   ['/gallery', 'Gallery'],
   // ['/volunteers', 'Volunteers'], // hidden: volunteer route is switched off (app/_volunteers)
 ];
@@ -22,7 +21,6 @@ const links = [
 const menus = {
   '/about': aboutSections.map((s) => [s.default ? '/about' : `/about/${s.slug}`, s.tab]),
   '/speakers': [['/speakers', 'Past Speakers'], ['/speakers?tab=expected', 'Expected Speakers']],
-  '/programmes': programmes.map((p) => [`/programmes/${p.id}`, p.alt]),
 };
 
 const Caret = ({ className }) => (
