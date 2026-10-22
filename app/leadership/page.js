@@ -1,4 +1,3 @@
-import PageHead from '../../components/PageHead';
 import SpeakerAvatar, { avatarBg } from '../../components/SpeakerAvatar';
 import { leadership } from '../../data/leadership';
 import { staticPageMetadata } from '../../lib/seo';
@@ -13,7 +12,10 @@ export default function LeadershipPage() {
   return (
     <section className="page" id="page-leadership">
       <div className="wrap">
-        <PageHead eyebrow="ABOUT US" title="Our Leadership" desc={intro} />
+        {/* intro first, then the "Our Leadership" heading over the lead pair */}
+        <div className="eyebrow"><span className="rule" /><span>ABOUT US</span></div>
+        <p className="page-desc">{intro}</p>
+        <h1 className="page-title">Our Leadership</h1>
         {leadership.map((group) => (
           <div key={group.people[0].name} className="leader-group">
             {group.title && <h3>{group.title}</h3>}
