@@ -1,6 +1,5 @@
 import PageHead from '../../components/PageHead';
 import CheckList from '../../components/CheckList';
-import RegistrationForm from '../../components/RegistrationForm';
 import { staticPageMetadata } from '../../lib/seo';
 
 export const metadata = staticPageMetadata('/attendees');
@@ -15,7 +14,11 @@ export default function AttendeesPage() {
             <CheckList items={['Access the festival programme and sessions', 'Explore the bazaar, gallery and festival spaces', 'Receive festival updates and registration details']} />
             <img className="att-art" src="/img/register-art.webp" alt="" width="664" height="488" />
           </div>
-          <RegistrationForm kind="attendee" />
+          {/* ponytail: form lives in components/RegistrationForm.js; swap it back in when registration opens */}
+          <div className="vol-form att-form">
+            <h3>Attendee registration</h3>
+            <p className="coming-soon">Coming soon!</p>
+          </div>
         </div>
       </div>
     </section>

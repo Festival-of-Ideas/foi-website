@@ -7,27 +7,14 @@ const panels = {
   'festival-of-ideas': {
     title: 'Festival of Ideas',
     image: { src: '/assets/mainaudi.webp', alt: 'Festival of Ideas stage in the SRCC main auditorium', w: 1200, h: 722 },
-    facts: [['4th', 'Edition'], ['4 days', '29 Oct – 1 Nov'], ['SRCC', 'University of Delhi']],
+    facts: [['4th', 'Edition'], ['4 days', '29 Oct – 1 Nov']],
     body: (
       <>
         <p>The Festival of Ideas Delhi 2026 is a premier intellectual forum celebrating ideas drawn from the life, culture and economy of the Indian people.</p>
-        <p>A joint initiative by the Shri Ram College of Commerce and supported by the Festival of Ideas Foundation, we endeavour to cultivate an accessible space for young inquisitive minds, introducing them to noble ideas that inspire meaningful economic &amp; social change towards a shared purpose.</p>
+        <p>An initiative of the Festival of Ideas Foundation, we endeavour to cultivate an accessible space for young inquisitive minds, introducing them to noble ideas that inspire meaningful economic &amp; social change towards a shared purpose.</p>
         <p className="about-quote">May ideas come to us from everywhere.</p>
       </>
     ),
-  },
-  '100-years-of-srcc': {
-    title: 'SRCC @ 100 Glorious Years',
-    image: { src: '/img/hero.webp', alt: 'Illustration of the SRCC campus during the festival', w: 1600, h: 1067 },
-    facts: [['1926', 'Founded'], ['100', 'Years'], ['Asia’s', 'Foremost commerce college']],
-    body: (
-      <>
-        <p>Anchoring the fourth edition of the Festival of Ideas Delhi, Shri Ram College of Commerce (SRCC) celebrates a monumental landmark - 100 glorious years of shaping India&apos;s commerce, economics, and management education - a historic milestone lauded by Hon&apos;ble Prime Minister Narendra Modi.</p>
-        <p>Established in 1926 as The Commercial College, the premier institute has evolved into one of the nation&apos;s most distinguished centers of learning, producing world-class leaders who shape business, finance, governance, law, cinema, and media today.</p>
-        <p>Standing firmly as Asia&apos;s foremost college of commerce, the Shri Ram College of Commerce embodies a century of academic excellence and an unparalleled legacy of leadership. As it steps into its second century, the college advances with an ambitious vision - to emerge as an institution of Global Choice.</p>
-      </>
-    ),
-    link: ['https://www.srcc.edu/centenary-celebrations-srcc', 'Visit SRCC.EDU'],
   },
   'fortress-india': {
     title: 'Fortress India',

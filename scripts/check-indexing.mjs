@@ -50,9 +50,9 @@ for (let offset = 0; offset < urls.length; offset += 4) {
   }));
 }
 
-assert.ok(!urls.includes(`${origin}/about/100-years-of-srcc`), 'Duplicate About page must be excluded');
+assert.ok(!urls.includes(`${origin}/about/festival-of-ideas`), 'Duplicate About page must be excluded');
 assert.ok(!urls.some((url) => /\/speakers\/e\d+$/.test(url)), 'Unannounced speakers must be excluded');
-await checkPage('/about/100-years-of-srcc', { canonical: `${origin}/about` });
+await checkPage('/about/festival-of-ideas', { canonical: `${origin}/about` });
 await checkPage('/speakers?tab=past', { canonical: `${origin}/speakers` });
 await checkPage('/speakers?tab=expected', { canonical: `${origin}/speakers`, index: false });
 await checkPage('/speakers/e1', { canonical: `${origin}/speakers/e1`, index: false });

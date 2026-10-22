@@ -9,6 +9,7 @@ import { programmes } from '../data/programmes';
 const links = [
   ['/', 'Home'],
   ['/about', 'About'],
+  ['/leadership', 'Leadership'],
   ['/speakers', 'Speakers'],
   ['/partners', 'Partners'],
   ['/programmes', 'Programmes'],
@@ -19,10 +20,7 @@ const links = [
 // Dropdown sub-pages, keyed by parent link. Always rendered (just visually hidden) so crawlers see every link.
 // The default About section links to /about, its canonical URL.
 const menus = {
-  '/about': [
-    ...aboutSections.map((s) => [s.default ? '/about' : `/about/${s.slug}`, s.tab]),
-    ['/leadership', 'Leadership'],
-  ],
+  '/about': aboutSections.map((s) => [s.default ? '/about' : `/about/${s.slug}`, s.tab]),
   '/speakers': [['/speakers', 'Past Speakers'], ['/speakers?tab=expected', 'Expected Speakers']],
   '/programmes': programmes.map((p) => [`/programmes/${p.id}`, p.alt]),
 };
@@ -44,7 +42,7 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const isActive = (href) => (href === '/' ? pathname === '/' : pathname.startsWith(href) || (href === '/about' && pathname === '/leadership'));
+  const isActive = (href) => (href === '/' ? pathname === '/' : pathname.startsWith(href));
   // Query-string entries (speaker tabs) can't be matched from the pathname alone, so they never show active.
   const isSubActive = (href) => !href.includes('?') && pathname === href;
   const close = () => setMobile(false);

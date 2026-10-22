@@ -11,7 +11,6 @@ export default function ProgrammesPage() {
         <header className="about-head">
           <div className="eyebrow"><span>FESTIVAL LAYOUT</span></div>
           <h1 className="page-title">Explore the festival grounds</h1>
-          <p className="page-desc">Four spaces across the SRCC campus, 29 Oct – 1 Nov 2026</p>
         </header>
 
         <div className="prog-grid">

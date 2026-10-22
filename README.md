@@ -8,11 +8,11 @@ Next.js website for Festival of Ideas Delhi. The canonical production origin is
 `app/sitemap.js` generates `/sitemap.xml` from the static pages in `lib/seo.js`,
 published speakers, programmes and unique About sections. New entries in these
 data sources appear in the sitemap on the next deployment. The current sitemap
-contains 64 canonical pages.
+contains 63 canonical pages.
 
 `app/robots.js` allows public pages, excludes `/api/` from crawling and advertises
 the sitemap. Each page has a canonical URL and its own title and description.
-The default SRCC About section canonicalises to `/about` because both routes
+The default About section canonicalises to `/about` because both routes
 render the same content. Query variants of `/speakers` canonicalise to `/speakers`.
 
 The expected-speaker tab is currently a placeholder. Its profiles and tab are

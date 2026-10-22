@@ -5,7 +5,7 @@ import { staticPageMetadata } from '../../lib/seo';
 
 export const metadata = staticPageMetadata('/leadership');
 
-const intro = 'The Festival of Ideas Delhi 2026 is a premier intellectual forum celebrating ideas drawn from the life, culture and economy of the Indian people. A joint initiative by the Shri Ram College of Commerce and supported by the Festival of Ideas Foundation, we endeavour to cultivate an accessible space for young inquisitive minds, introducing them to noble ideas that inspire meaningful economic & social change towards a shared purpose.';
+const intro = 'The Festival of Ideas Delhi 2026 is a premier intellectual forum celebrating ideas drawn from the life, culture and economy of the Indian people. An initiative of the Festival of Ideas Foundation, we endeavour to cultivate an accessible space for young inquisitive minds, introducing them to noble ideas that inspire meaningful economic & social change towards a shared purpose.';
 
 const bg = avatarBg({ color: ['#3B1653', '#C23764'] });
 
