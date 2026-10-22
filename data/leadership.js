@@ -19,12 +19,12 @@ export const leadership = [
   {
     title: 'Fortress India',
     people: [
-      { name: 'General V. K. Singh', role: 'Governor of Mizoram, 23rd Chief of the Army Staff', image: '/assets/leadership/vk-singh.webp' },
-      { name: 'Lt. Gen. K. T. Parnaik', role: 'Governor of Arunachal Pradesh, 19th GOC-in-C, Northern Command', image: '/assets/leadership/kt-parnaik.webp' },
-      { name: 'Admiral Karambir Singh', role: '24th Chief of the Naval Staff, Indian Navy', image: '/assets/leadership/karambir-singh.webp' },
-      { name: 'ACM R. K. S. Bhadauria', role: '23rd Chief of the Air Staff, Indian Air Force', image: '/assets/leadership/rks-bhadauria.webp' },
-      { name: 'Vallabh Bhanshali', role: 'Co-Founder, Enam Securities, Philanthropist & Former Director, RBI', image: '/assets/leadership/vallabh-bhanshali.webp' },
-      { name: 'Shiv Kunal Verma', role: 'President, Fortress India, Military Historian & Filmmaker', image: '/assets/leadership/shiv-kunal-verma.webp' },
+      { name: 'General V. K. Singh', tag: 'Patron, Fortress India', role: 'Governor of Mizoram, 23rd Chief of the Army Staff', image: '/assets/leadership/vk-singh.webp' },
+      { name: 'Lt. Gen. K. T. Parnaik', tag: 'Advisory Board, Fortress India', role: 'Governor of Arunachal Pradesh, 19th GOC-in-C, Northern Command', image: '/assets/leadership/kt-parnaik.webp' },
+      { name: 'Admiral Karambir Singh', tag: 'Advisory Board, Fortress India', role: '24th Chief of the Naval Staff, Indian Navy', image: '/assets/leadership/karambir-singh.webp' },
+      { name: 'ACM R. K. S. Bhadauria', tag: 'Advisory Board, Fortress India', role: '23rd Chief of the Air Staff, Indian Air Force', image: '/assets/leadership/rks-bhadauria.webp' },
+      { name: 'Vallabh Bhanshali', tag: 'Advisory Board, Fortress India', role: 'Co-Founder, Enam Securities, Philanthropist & Former Director, RBI', image: '/assets/leadership/vallabh-bhanshali.webp' },
+      { name: 'Shiv Kunal Verma', tag: 'Founding President, Fortress India', role: 'Military Historian & Filmmaker', image: '/assets/leadership/shiv-kunal-verma.webp' },
     ],
   },
 ];
