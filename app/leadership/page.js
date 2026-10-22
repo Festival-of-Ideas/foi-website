@@ -15,8 +15,8 @@ export default function LeadershipPage() {
       <div className="wrap">
         <PageHead eyebrow="ABOUT US" title="Our Leadership" desc={intro} />
         {leadership.map((group) => (
-          <div key={group.title} className="leader-group">
-            <h3>{group.title}</h3>
+          <div key={group.people[0].name} className="leader-group">
+            {group.title && <h3>{group.title}</h3>}
             <div className="speaker-grid leader-grid">
               {group.people.map((p) => (
                 <div key={p.name} className="speaker-card">
