@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="foot-grid">
           <div className="foot-brand">
             <img src="/img/logo-footer.webp" alt="Festival of Ideas Delhi" width="216" height="103" />
-            <p>Ideas from the Life, Culture and Economy of the Indian People! Hosted by the Festival of Ideas Foundation &amp; SRCC</p>
+            <p>Ideas from the Life, Culture and Economy of the Indian People! Hosted by the Festival of Ideas Foundation</p>
           </div>
           {cols.map(([title, items]) => (
             <div key={title} className="foot-col">
@@ -23,8 +23,7 @@ export default function Footer() {
           ))}
         </div>
         <div className="foot-bottom">
-          <span>© 2026 Festival of Ideas, SRCC. All rights reserved.</span>
-          <span>Celebrating 100 Glorious Years of SRCC</span>
+          <span>© 2026 Festival of Ideas. All rights reserved.</span>
         </div>
       </div>
     </footer>

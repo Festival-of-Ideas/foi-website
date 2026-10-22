@@ -6,7 +6,7 @@ import { aboutSections } from '../data/about';
 const panels = {
   'festival-of-ideas': {
     title: 'Festival of Ideas',
-    image: { src: '/assets/mainaudi.webp', alt: 'Festival of Ideas stage in the SRCC main auditorium', w: 1200, h: 722 },
+    image: { src: '/assets/mainaudi.webp', alt: 'Festival of Ideas stage in the main auditorium', w: 1200, h: 722 },
     facts: [['4th', 'Edition'], ['4 days', '29 Oct – 1 Nov']],
     body: (
       <>

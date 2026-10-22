@@ -16,7 +16,7 @@ globalThis.fetch = async (url, init) => {
 
 const { POST } = await import('../app/api/attendees/route.js');
 const post = (data) => POST(new Request('http://x', { method: 'POST', body: JSON.stringify(data) }));
-const ok = { name: 'Asha', email: 'Asha@Example.com', phone: '+91 98765 43210', organisation: 'SRCC' };
+const ok = { name: 'Asha', email: 'Asha@Example.com', phone: '+91 98765 43210', organisation: 'Acme' };
 
 assert.equal((await post(ok)).status, 200);
 assert.equal(rows[0].Email.email, 'asha@example.com');

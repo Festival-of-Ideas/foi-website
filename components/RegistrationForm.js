@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 const copy = {
-  attendee: { endpoint: '/api/attendees', title: 'Attendee registration', phone: '10-digit mobile', org: ['College / Organisation', 'e.g. SRCC'] },
+  attendee: { endpoint: '/api/attendees', title: 'Attendee registration', phone: '10-digit mobile', org: ['College / Organisation', 'Your college or organisation'] },
   delegate: { endpoint: '/api/delegates', title: 'Delegate registration', phone: 'WhatsApp preferred', org: ['Organisation associated', 'Your organisation'] },
 };
 
@@ -46,7 +46,7 @@ export default function RegistrationForm({ kind }) {
       <div className="vol-form att-done" role="status">
         <img src="/img/butterfly.webp" alt="" width="72" height="72" />
         <h3>You&apos;re registered!</h3>
-        <p>See you at SRCC, 29 Oct – 1 Nov 2026.</p>
+        <p>See you at the festival, 29 Oct – 1 Nov 2026.</p>
       </div>
     );
   }

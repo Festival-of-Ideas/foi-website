@@ -42,7 +42,7 @@ const siteIdentity = {
       image: absoluteUrl('/img/hero.webp'),
       location: {
         '@type': 'Place',
-        name: 'Shri Ram College of Commerce, University of Delhi',
+        name: 'University of Delhi',
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'Maurice Nagar',

@@ -96,7 +96,7 @@ export default function VolunteerForm() {
       </div>
       <div className="volunteer-guidance">
         <h4>Before you apply</h4>
-        <p>The Volunteer Programme is for students currently enrolled in any course and year in New Delhi. The festival is scheduled from <strong>29 October to 1 November 2026</strong> at the <strong>Shri Ram College of Commerce (SRCC), University of Delhi</strong>.</p>
+        <p>The Volunteer Programme is for students currently enrolled in any course and year in New Delhi. The festival is scheduled from <strong>29 October to 1 November 2026</strong> at the <strong>University of Delhi</strong>.</p>
         <div className="volunteer-guidance-grid">
           <div className="volunteer-guidance-item"><strong>Commitment:</strong> To be present all four days of the festival, attend organizing team orientation, and work on tasks with your allocated team.</div>
           <div className="volunteer-guidance-item"><strong>Incentives:</strong> Hands-on Organizing Team Experience, High Value Certification with vetting systems, volunteer merchandise, food and high-profile networking opportunities</div>
